@@ -1,0 +1,14 @@
+{
+    "genres": [
+      { "id": 1, "name": "Sci-Fi" },
+      { "id": 2, "name": "Romantic" }
+    ],
+    "movies": [
+      { "id": 1, "title": "Inception", "genreId": 1 },
+      { "id": 2, "title": "The Notebook", "genreId": 2 }
+    ],
+    "reviews": [
+      { "id": 1, "movieId": 1, "content": "Amazing!" },
+      { "id": 2, "movieId": 2, "content": "Heartwarming." }
+    ]
+  }

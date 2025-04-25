@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Server CRD Test</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <br><br>
+    <!--This fetch button gives the user the ability to refresh the data in the tables-->
+    <div class="row">
+    <button  type="button"  class="btn btn-primary col-sm-3 mx-auto"  id="fetch-movies">Fetch</button>
+    <br></div>
+    <br>
+    <div class="row">
+        <!--This form presents 3 input boxes and create / delete buttons to the user. This gives
+        the user ability to add movies and delete specific row ids-->
+        <div id="movie-form-container" class="container col-sm-4 px-4">
+        <form class="container col-sm-">
+            <input class="form-control form-control-sm" id="movie-title"  type="text" placeholder="Movie Title"></input>
+            <input class="form-control form-control-sm" id="movie-genre-id"  type="text" placeholder="Genre Id"></input>
+            <button  type="button"  class="btn btn-primary" id="create-movie">Create</button>
+            <input  class="form-control form-control-sm" id="dbmovie-id"  type="text" placeholder="Movie db Id"></input>
+            <button  type="button"  class="btn btn-primary" id="delete-movie">Delete</button>
+
+        </form></div>
+        <!--This form presents 2 input boxes and create / delete buttons to the user. This gives
+        the user ability to add new genres and delete specific row ids-->
+        <div id="genre-form-container" class="container col-sm-4">
+        <form class="container col-sm-">
+            <input class="form-control form-control-sm" id="genre-name"  type="text" placeholder="Genre Name"></input>
+        
+            <button  type="button"  class="btn btn-primary" id="create-genre">Create</button>
+            <input class="form-control form-control-sm" id="dbgenre-id"  type="text" placeholder="Genre db Id"></input>
+            <button  type="button"  class="btn btn-primary" id="delete-genre">Delete</button>
+
+
+        </form></div>
+        <!--This form presents 3 input boxes and create / delete buttons to the user. This gives
+        the user ability to add reviews to specific movies and delete specific row ids-->
+        <div id="review-form-container" class="container  col-sm-4">
+        <form class="container col-sm-">
+        <input class="form-control form-control-sm" id="review-movie-id"  type="text" placeholder="Movie Id"></input>
+        <input class="form-control form-control-sm" id="review-content"  type="text" placeholder="Review Content"></input>
+        <button  type="button"  class="btn btn-primary" id="create-review">Create</button>
+        <input class="form-control form-control-sm" id="dbreview-id"  type="text" placeholder="Review db Id"></input>
+        <button  type="button"  class="btn btn-primary" id="delete-review">Delete</button>
+        </form></div>
+    </div>
+    <br>
+
+    <!--These containers are used by the javascript to display the tables returned 
+    from json server-->
+    <div class="row p-4">
+        <div id="movies-container" class="col-sm-4"></div>
+        <div id="genres-container" class="col-sm-4"></div>
+        <div id="reviews-container" class="col-sm-4"></div>
+    </div>
+    
+    
+
+
+    <script src="crud.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
